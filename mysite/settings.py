@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
-
+from secret_settings import *
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -22,8 +22,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-(xb9-bnbrrv(i(tv%m=rf#3ocqemvn*31!m*45g&8zru$n$f^c'
-
+# import os
+SECRET_KEY = DJANGO_SECRET
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -146,21 +146,12 @@ USE_TZ = True
 
 import os
 
-# AWS_ACCESS_KEY_ID = 'AKIAQVL2JMXG7MUD2GGB'
-# AWS_SECRET_ACCESS_KEY = '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'
-# AWS_STORAGE_BUCKET_NAME = 'jordonapp'
-# AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-# AWS_S3_OBJECT_PARAMETERS = {
-#     'CacheControl': 'max-age=86400',
-# }
-# AWS_LOCATION = 'static'
+
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'mysite/static'),
 ]
 
-# STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
-# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
 STATIC_URL = 'static/'
