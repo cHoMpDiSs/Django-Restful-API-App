@@ -1,49 +1,31 @@
 version: "3.8"
 services:
   web:
-    build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    build: ./app
+    image: 045890495949.dkr.ecr.us-east-1.amazonaws.com/jordon_app:django_docker_aws_web
+    command: gunicorn mysite.wsgi:application --bind 0.0.0.0:8000
     volumes:
-      - ./mysite/:/usr/src/mysite/
-    ports:
-      - 8000:8000
-    
+      - ./app/:/usr/src/app/
+      - static_volume:/usr/src/app/static
+    expose:
+      - 8000
     environment:
       - DB_NAME=comicshop
       - DB_USER=postgres
       - DB_PASSWORD=admin123
-      - DB_HOST=pg
+      - DB_HOST=comicshop.c8da90fz6lfx.us-east-1.rds.amazonaws.com
       - DB_PORT=5432
       - DATABASE=postgres
+      - VIRTUAL_HOST=ec2-34-198-127-7.compute-1.amazonaws.com
+      - VIRTUAL_PORT=8000
+  nginx:
+    build: ./nginx
+    image: 045890495949.dkr.ecr.us-east-1.amazonaws.com/jordon_app:django_docker_aws_nginx
+    volumes:
+      - static_volume:/usr/src/app/static
+    ports:
+      - 8000:80
     depends_on:
-      - pg
-
-
-  pg:
-      container_name: pg_container
-      image: postgres:13.2-alpine
-      restart: always
-      environment:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: admin123
-          POSTGRES_DB: comicshop
-          POSTGRES_HOST_AUTH_METHOD: trust
-      ports:
-          - "5432:5432"
-      volumes:
-          - ./data:/data
-          - ./data/misc/django_init.sql:/docker-entrypoint-initdb.d/1-django-init.sql
-  pgadmin:
-      container_name: pgadmin_container
-      image: dpage/pgadmin4:5.2
-      restart: always
-      environment:
-          PGADMIN_DEFAULT_EMAIL: admin@example.com
-          PGADMIN_DEFAULT_PASSWORD: admin123
-          PGADMIN_LISTEN_PORT: 5433
-          PGADMIN_CONFIG_SERVER_MODE: "False"
-          PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
-      ports:
-          - "5433:5433"
-      depends_on:
-          - pg
+      - web
+volumes:
+  static_volume:

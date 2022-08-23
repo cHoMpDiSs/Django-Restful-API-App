@@ -12,7 +12,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 from secret_settings import *
-
+from decouple import config
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -81,7 +82,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-from decouple import config
+
 
 DATABASES = {
     'default': {
@@ -144,14 +145,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-import os
 
 
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'mysite/static'),
-]
-
+if DEBUG:
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'mysite/static'),
+    ]
+else:
+    STATIC_ROOT = [
+        os.path.join(BASE_DIR, 'mysite/static'),
+    ]
 
 
 STATIC_URL = 'static/'
