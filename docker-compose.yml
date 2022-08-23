@@ -5,8 +5,8 @@ services:
     image: 045890495949.dkr.ecr.us-east-1.amazonaws.com/jordon_app:django_docker_aws_web
     command: gunicorn mysite.wsgi:application --bind 0.0.0.0:8000
     volumes:
-      - ./app/:/usr/src/app/
-      - static_volume:/usr/src/app/static
+      - ./mysite/:/usr/src/mysite/
+      - static_volume:/usr/src/mysite/static
     expose:
       - 8000
     environment:
