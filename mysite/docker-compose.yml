@@ -1,0 +1,31 @@
+version: "3.8"
+services:
+  web:
+    build: ./mysite
+    image: 045890495949.dkr.ecr.us-east-1.amazonaws.com/jordon_app:jordon_app_web
+    command: gunicorn mysite.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - ./mysite/:/usr/src/myapp/
+      - static_volume:/usr/src/mysite/static
+    expose:
+      - 8000
+    environment:
+      - DB_NAME=comicshop
+      - DB_USER=postgres
+      - DB_PASSWORD=admin123
+      - DB_HOST=comicshop.c8da90fz6lfx.us-east-1.rds.amazonaws.com
+      - DB_PORT=5432
+      - DATABASE=postgres
+      - VIRTUAL_HOST=ec2-34-198-127-7.compute-1.amazonaws.com
+      - VIRTUAL_PORT=8000
+  nginx:
+    build: ./nginx
+    image: 045890495949.dkr.ecr.us-east-1.amazonaws.com/jordon_app:jordon_app_nginx
+    volumes:
+      - static_volume:/usr/src/mysite/static
+    ports:
+      - 8000:80
+    depends_on:
+      - web
+volumes:
+  static_volume:
