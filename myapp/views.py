@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from rest_framework import status
 # from rest_framework import permissions
 from .serializers import *
-from .models import *
+from .models import Comics, Publisher, Toys, Superhero
 # Create your views here.
 def home(request):
     return render(request, 'home.html')
