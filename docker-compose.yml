@@ -10,7 +10,7 @@ services:
     
     expose:
       # - 80
-      - 8000
+      - 80
     environment:
       - DB_NAME=comicshop
       - DB_USER=postgres
