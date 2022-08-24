@@ -9,8 +9,8 @@ services:
       - static_volume:/usr/src/mysite/static
     
     expose:
-      - 80
-      # - 8000
+      # - 80
+      - 8000
     environment:
       - DB_NAME=comicshop
       - DB_USER=postgres
@@ -28,7 +28,7 @@ services:
     # ports:
     #   - 8000:80
     ports:
-      - 80:80
+      - 80
     depends_on:
       - web
 volumes:
