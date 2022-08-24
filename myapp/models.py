@@ -10,7 +10,7 @@ class Publisher(models.Model):
     state = models.CharField(max_length=10)
 
     def __str__(self):
-        return self.publisher_name, self.address, self.city, self.state
+        return f'{self.publisher_name, self.address, self.city, self.state}'
 
 class Superhero(models.Model):
     publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE)
@@ -19,7 +19,7 @@ class Superhero(models.Model):
     has_toys = models.BooleanField()
 
     def __str__(self):
-        return self.publisher, self.superhero_name, self.has_comics, self.has_toys
+        return f'{self.publisher, self.superhero_name, self.has_comics, self.has_toys}'
 
 
 class Comics(models.Model):  
@@ -30,7 +30,7 @@ class Comics(models.Model):
     price = models.CharField(max_length=10)
 
     def __str__(self):
-        return self.publisher, self.superhero, self.series, self.issue, self.price
+        return f'{self.publisher, self.superhero, self.series, self.issue, self.price}'
        
 
 
@@ -42,7 +42,7 @@ class Toys(models.Model):
     ages = models.CharField(max_length=20)
 
     def __str__(self):
-        return self.publisher, self.super_hero, self.toy_type, self.toy_name, self.ages
+        return f'{self.publisher, self.super_hero, self.toy_type, self.toy_name, self.ages}'
 
 
 
