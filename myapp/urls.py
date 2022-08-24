@@ -8,25 +8,25 @@ from django.conf.urls.static import static
 router = routers.DefaultRouter( trailing_slash=False)
 
 
-router.register(r':8000/api/comics', ComicViewSet) 
-router.register(r':8000/api/publishers', PublisherViewSet) 
-router.register(r':8000/api/superheros', SuperheroViewSet)
-router.register(r':8000/api/toys', ToysViewSet)  
+router.register(r'/api/comics', ComicViewSet) 
+router.register(r'/api/publishers', PublisherViewSet) 
+router.register(r'/api/superheros', SuperheroViewSet)
+router.register(r'/api/toys', ToysViewSet)  
 
 urlpatterns = [
   
-    path(':8000',include(router.urls)),
+    
     path('', home, name='home'),
     path('thankyou', thankyou, name='thankyou'),
     path('api', include(router.urls)),
-    path(':8000/api/comics',ComicApiView.as_view()),
-    path(':8000/api/comics/<int:comic_id>', ComicApiView.as_view()),
-    path(':8000/api/publishers',PublisherApiView.as_view()),
-    path(':8000/api/publishers/<int:publisher_id>', PublisherApiView.as_view()),
-    path(':8000/api/superheros',SuperheroApiView.as_view()),
-    path(':8000/api/superheros/<int:superhero_id>', SuperheroApiView.as_view()),
-    path(':8000/api/toys',ToysApiView.as_view()),
-    path(':8000/api/toys/<int:toy_id>', ToysApiView.as_view()),
+    path('/api/comics',ComicApiView.as_view()),
+    path('/api/comics/<int:comic_id>', ComicApiView.as_view()),
+    path('/api/publishers',PublisherApiView.as_view()),
+    path('/api/publishers/<int:publisher_id>', PublisherApiView.as_view()),
+    path('/api/superheros',SuperheroApiView.as_view()),
+    path('/api/superheros/<int:superhero_id>', SuperheroApiView.as_view()),
+    path('/api/toys',ToysApiView.as_view()),
+    path('/api/toys/<int:toy_id>', ToysApiView.as_view()),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

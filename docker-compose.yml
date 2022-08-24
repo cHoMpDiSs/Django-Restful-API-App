@@ -3,7 +3,7 @@ services:
   web:
     build: .
     image: 045890495949.dkr.ecr.us-east-1.amazonaws.com/jordon_app:jordon_app_web
-    command: gunicorn mysite.wsgi:application --bind 0.0.0.0:8000
+    command: gunicorn mysite.wsgi:application --bind 0.0.0.0:80
     volumes:
       - ./mysite/:/usr/src/mysite/
       - static_volume:/usr/src/mysite/static
@@ -18,7 +18,7 @@ services:
       - DB_PORT=5432
       - DATABASE=postgres
       - VIRTUAL_HOST=ec2-34-198-127-7.compute-1.amazonaws.com
-      - VIRTUAL_PORT=8000
+      - VIRTUAL_PORT=80
   nginx:
     build: ./nginx
     image: 045890495949.dkr.ecr.us-east-1.amazonaws.com/jordon_app:jordon_app_nginx
