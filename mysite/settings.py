@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
-from django.contrib.staticfiles import storage
 from decouple import config
 import os
 
