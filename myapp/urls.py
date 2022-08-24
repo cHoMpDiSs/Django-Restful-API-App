@@ -28,7 +28,7 @@ urlpatterns = [
     path('/api/toys',ToysApiView.as_view()),
     path('/api/toys/<int:toy_id>', ToysApiView.as_view()),
 
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] 
 
 
 urlpatterns += router.urls
