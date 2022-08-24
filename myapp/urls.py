@@ -2,7 +2,8 @@ from django.urls import include, path
 from rest_framework import routers, viewsets
 from .views import *
 
-
+from django.conf import settings
+from django.conf.urls.static import static
 
 router = routers.DefaultRouter(trailing_slash=False)
 
@@ -27,6 +28,7 @@ urlpatterns = [
     path('api/toys',ToysApiView.as_view()),
     path('api/toys/<int:toy_id>', ToysApiView.as_view()),
 
-] 
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
 urlpatterns += router.urls
 
