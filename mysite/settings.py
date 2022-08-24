@@ -115,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 
-
+from rest_framework import renderers
 
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
