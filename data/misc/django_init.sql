@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS comics;
-CREATE DATABASE comics;
+DROP DATABASE IF EXISTS comicshop;
+CREATE DATABASE comicshop;
 
-\c comics
+\c comicshop
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
