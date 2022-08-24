@@ -8,8 +8,8 @@ from django.conf.urls.static import static
 router = routers.DefaultRouter(trailing_slash=False)
 
 
-router.register(r'api/comics', ComicViewSet) 
-router.register(r'api/publishers', PublisherViewSet) 
+router.register(r'/comics', ComicViewSet) 
+router.register(r'/publishers', PublisherViewSet) 
 router.register(r':8000/api/superheros', SuperheroViewSet)
 router.register(r':8000/api/toys', ToysViewSet)  
 
