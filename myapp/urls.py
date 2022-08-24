@@ -18,7 +18,7 @@ urlpatterns = [
     
     path('', home, name='home'),
     path('thankyou', thankyou, name='thankyou'),
-    path('api', include(router.urls)),
+    path(':8000/api', include(router.urls)),
     path(':8000/api/comics',ComicApiView.as_view()),
     path(':8000/api/comics/<int:comic_id>', ComicApiView.as_view()),
     path(':8000/api/publishers',PublisherApiView.as_view()),
