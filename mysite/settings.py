@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
-from secret_settings import *
+# from secret_settings import *
 from decouple import config
 import os
 
