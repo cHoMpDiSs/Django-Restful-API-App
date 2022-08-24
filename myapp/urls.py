@@ -8,7 +8,7 @@ from django.conf.urls.static import static
 router = routers.DefaultRouter(trailing_slash=False)
 
 
-router.register(r'api/comics', ComicViewSet) 
+router.register(r':8000/api/comics', ComicViewSet) 
 router.register(r'api/publishers', PublisherViewSet) 
 router.register(r'api/superheros', SuperheroViewSet)
 router.register(r'api/toys', ToysViewSet)  
@@ -18,7 +18,7 @@ urlpatterns = [
     
     path('', home, name='home'),
     path('thankyou', thankyou, name='thankyou'),
-    path(':8000/api', include(router.urls)),
+    path('/api', include(router.urls)),
     path(':8000/api/comics',ComicApiView.as_view()),
     path(':8000/api/comics/<int:comic_id>', ComicApiView.as_view()),
     path(':8000/api/publishers',PublisherApiView.as_view()),
