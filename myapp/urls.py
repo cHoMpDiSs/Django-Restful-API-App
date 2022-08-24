@@ -15,7 +15,7 @@ router.register(r':8000/api/toys', ToysViewSet)
 
 urlpatterns = [
   
-    
+    path(':8000',include(router.urls)),
     path('', home, name='home'),
     path('thankyou', thankyou, name='thankyou'),
     path('api', include(router.urls)),
@@ -30,6 +30,6 @@ urlpatterns = [
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
-urlpatterns += ':8000'
+
 urlpatterns += router.urls
 
