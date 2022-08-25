@@ -5,7 +5,7 @@ FROM python:3.8-slim-buster
 EXPOSE 8000
 
 # Set the working directory
-WORKDIR /usr/src/mysite
+WORKDIR /usr/src/project
 
 # Keeps Python from generating .pyc files in the container
 ENV PYTHONDONTWRITEBYTECODE=1
