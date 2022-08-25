@@ -6,7 +6,7 @@ services:
     command: gunicorn mysite.wsgi:application --bind 0.0.0.0:80
     volumes:
       - ./mysite/:/usr/src/mysite
-      - static_volume:/usr/src/mysite/static
+      - static_volume:/usr/src/project/mysite/static
     
     expose:
       - 8000
@@ -24,7 +24,7 @@ services:
     build: ./nginx
     image: 045890495949.dkr.ecr.us-east-1.amazonaws.com/jordon_app:jordon_app_nginx
     volumes:
-      - static_volume:/usr/src/mysite/static
+      - static_volume:/usr/src/project/mysite/static
     ports:
       - 80:80
 
