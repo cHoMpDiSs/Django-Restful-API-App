@@ -3,7 +3,7 @@ services:
   web:
     build: ./mysite
     image: 045890495949.dkr.ecr.us-east-1.amazonaws.com/jordon_app:jordon_app_web
-    command: gunicorn mysite.wsgi:application --bind 0.0.0.0:8000
+    command: gunicorn wsgi:application --bind 0.0.0.0:8000
     volumes:
       - ./mysite/:/usr/src/mysite
       - static_volume:/usr/src/mysite/static
