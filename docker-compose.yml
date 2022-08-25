@@ -1,11 +1,12 @@
 version: "3.8"
 services:
   web:
-    build: ./mysite
+    build: .
     image: 045890495949.dkr.ecr.us-east-1.amazonaws.com/jordon_app:jordon_app_web
     command: gunicorn mysite.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - ./mysite/:/usr/src/mysite
+      - ./myapp/:/usr/src/myapp
       - static_volume:/usr/src/mysite/static
     
     expose:
