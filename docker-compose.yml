@@ -20,15 +20,15 @@ services:
       - DATABASE=postgres
       - VIRTUAL_HOST=ec2-34-198-127-7.compute-1.amazonaws.com
       - VIRTUAL_PORT=80
-  nginx:
-    build: ./nginx
-    image: 045890495949.dkr.ecr.us-east-1.amazonaws.com/jordon_app:jordon_app_nginx
-    volumes:
-      - static_volume:/usr/src/mysite/static
-    ports:
-      - 80:80
+  # nginx:
+  #   build: ./nginx
+  #   image: 045890495949.dkr.ecr.us-east-1.amazonaws.com/jordon_app:jordon_app_nginx
+  #   volumes:
+  #     - static_volume:/usr/src/mysite/static
+  #   ports:
+  #     - 80:80
 
-    depends_on:
-      - web
-volumes:
-  static_volume:
+  #   depends_on:
+  #     - web
+# volumes:
+#   static_volume:
