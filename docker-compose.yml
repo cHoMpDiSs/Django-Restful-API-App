@@ -24,11 +24,10 @@ services:
     build: ./nginx
     image: 045890495949.dkr.ecr.us-east-1.amazonaws.com/jordon_app:jordon_app_nginx
     volumes:
-      - static_volume:/usr/src/mysite/static/
+      - static_volume:/usr/src/mysite/static
     ports:
       - 80:80
-    # ports:
-    #   - 80
+
     depends_on:
       - web
 volumes:
