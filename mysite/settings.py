@@ -148,12 +148,14 @@ USE_TZ = True
 
 
 
-if DEBUG:
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
-else:
-    STATIC_ROOT = [os.path.join(BASE_DIR, "static")]
+# if DEBUG:
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "mysite/static/"),)
+# else:
+# STATIC_ROOT = os.path.join(BASE_DIR, "/static")
 
-STATIC_URL = '/static/'
+# STATIC_URL = os.path.join(BASE_DIR, "mysite/static")
+STATIC_URL = "mysite/static/"
+
 
 
 
