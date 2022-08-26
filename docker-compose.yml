@@ -6,7 +6,7 @@ services:
     command: gunicorn mysite.wsgi:application --bind 0.0.0.0:80
     volumes:
       - ./mysite/:/usr/src/project/mysite
-      # - static_volume:/usr/src/project/static
+      - static_volume:/usr/src/project/static
     
     expose:
       - 8000
