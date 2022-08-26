@@ -148,11 +148,11 @@ USE_TZ = True
 
 if DEBUG:
     STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, 'mysite/static'),
+        os.path.join(BASE_DIR, 'static'),
     ]
 else:
     STATIC_ROOT = [
-        os.path.join(BASE_DIR, 'mysite/static'),
+        os.path.join(BASE_DIR, 'static'),
     ]
 
 
