@@ -3,7 +3,6 @@ from .models import *
 
 
 class ComicSerializer(serializers.ModelSerializer):
-    
     class Meta:
         model = Comics
         fields = ['id','publisher', 'superhero', 'series', 'issue', 'price']
@@ -16,7 +15,7 @@ class PublisherSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Publisher
-        fields = ['id','publisher_name', 'address', 'city', 'state',]
+        fields = ['id','publisher_name', 'address', 'city', 'state']
 
 
 class SuperheroSerializer(serializers.ModelSerializer):

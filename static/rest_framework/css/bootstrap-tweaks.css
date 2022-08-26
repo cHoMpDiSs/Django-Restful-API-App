@@ -29,6 +29,7 @@ a single block in the template.
 /* custom navigation styles */
 .navbar {
   width: 100%;
+  height: 7%;
   position: fixed;
   left: 0;
   top: 0;
