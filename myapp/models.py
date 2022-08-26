@@ -25,7 +25,7 @@ class Superhero(models.Model):
 class Comics(models.Model):  
     publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE)
     superhero = models.ForeignKey(Superhero, on_delete=models.CASCADE)
-    series = models.CharField(max_length=20) 
+    series = models.CharField(max_length=30) 
     issue = models.CharField(max_length=20)
     price = models.CharField(max_length=10)
 
