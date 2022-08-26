@@ -23,8 +23,8 @@ services:
   nginx:
     build: ./nginx
     image: 045890495949.dkr.ecr.us-east-1.amazonaws.com/jordon_app:jordon_app_nginx
-    volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    # volumes:
+    #   - ./nginx/nginx.conf:/etc/nginx/nginx.conf
     ports:
       - 80:80
 
