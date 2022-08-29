@@ -121,13 +121,13 @@ td {
 }
 
 tr:nth-child(odd) {
-  background-color: #0a0a0a;
+  background-color: #fdfdfd;
   border-collapse: collapse;
   border: 5px solid black;
 }
 
 .table {
-  border:5px solid black;
+  border:5px solid rgb(0, 0, 0);
   background-color: #f8f6f6;
 }
 
@@ -238,7 +238,7 @@ footer a:hover {
 
 /* custom general page styles */
 .hero-unit h1, .hero-unit h2 {
-  color: #000000;
+  color: #020202;
 }
 
 body a {
@@ -254,7 +254,7 @@ body a:hover {
 }
 
 body {
-  color: #080808;
+  color: #000000;
   font-size: 15px;
   font-weight: 1000;
 }
