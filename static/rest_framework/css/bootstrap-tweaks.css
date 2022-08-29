@@ -35,7 +35,7 @@ a single block in the template.
 }
 
 .navbar {
-  background: #2c2c2c;
+  background: #030303;
   color: white;
   
   border: none;
@@ -48,7 +48,7 @@ a single block in the template.
 }
 
 .nav-list > .active > a, .nav-list > .active > a:hover {
-  background: #12102e;
+  background: #828288;
 }
 
 .navbar .dropdown-menu li a, .navbar .dropdown-menu li {
@@ -65,7 +65,7 @@ ul.breadcrumb {
 }
 
 .breadcrumb li.active a {
-  color: rgb(7, 7, 7);
+  color: rgb(0, 0, 0);
 }
 
 .pagination>.disabled>a,
@@ -115,13 +115,13 @@ body {
 }
 
 td {
-  border: 5px solid black;
+  border: 5px solid rgb(0, 0, 0);
   border-collapse: collapse;
   padding: 5px;
 }
 
 tr:nth-child(odd) {
-  background-color: #f8f6f6;
+  background-color: #0a0a0a;
   border-collapse: collapse;
   border: 5px solid black;
 }
@@ -230,6 +230,7 @@ footer a:hover {
 }
 
 .page-header {
+  
   border-bottom: none;
   padding-bottom: 0px;
   margin: 0;
@@ -237,7 +238,7 @@ footer a:hover {
 
 /* custom general page styles */
 .hero-unit h1, .hero-unit h2 {
-  color: #0c0c0c;
+  color: #000000;
 }
 
 body a {
@@ -247,14 +248,15 @@ body a {
 }
 
 body a:hover {
-  color: #f70707;
+  color: #cc3e3e;
   font-size: larger;
   font-weight: 1000;
 }
 
 body {
-  color: #0a0a0a;
-  font-size: 20px;
+  color: #080808;
+  font-size: 15px;
+  font-weight: 1000;
 }
 .table{
   color: #030303;
