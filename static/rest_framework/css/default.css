@@ -2,11 +2,13 @@
 content running up underneath it. */
 
 h1 {
-  font-weight: 300;
+  font-weight: 1000;
+  color: rgb(0, 0, 0);
 }
 
 h2, h3 {
-  font-weight: 300;
+  font-weight: 1000;
+  color: rgb(0, 0, 0);
 }
 
 .resource-description, .response-info {
@@ -60,7 +62,24 @@ form select[multiple] {
 .errorlist {
   margin-top: 0.5em;
 }
+.btn {
+  color: white;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #080808;
+  border-color: #070707;
+}
 
+.btn-primary:hover {
+  color: rgb(255, 0, 0);
+  background-color: #080808;
+ 
+}
+
+.get-form{
+  color:white;
+}
 pre {
   overflow: auto;
   word-wrap: normal;

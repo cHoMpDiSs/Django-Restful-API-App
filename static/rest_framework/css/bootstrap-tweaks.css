@@ -19,7 +19,7 @@ a single block in the template.
 }
 
 .navbar-inverse .brand a {
-  color: #999999;
+  color: #fdfdfd;
 }
 .navbar-inverse .brand:hover a {
   color: white;
@@ -35,19 +35,20 @@ a single block in the template.
 }
 
 .navbar {
-  background: #2C2C2C;
+  background: #2c2c2c;
   color: white;
+  
   border: none;
-  border-top: 5px solid #A30000;
+  border-top: 8px solid #f0ebeb;
   border-radius: 0px;
 }
 
 .navbar .nav li, .navbar .nav li a, .navbar .brand:hover {
-  color: white;
+  color: rgb(248, 245, 245);
 }
 
 .nav-list > .active > a, .nav-list > .active > a:hover {
-  background: #2C2C2C;
+  background: #12102e;
 }
 
 .navbar .dropdown-menu li a, .navbar .dropdown-menu li {
@@ -64,7 +65,7 @@ ul.breadcrumb {
 }
 
 .breadcrumb li.active a {
-  color: #777;
+  color: rgb(7, 7, 7);
 }
 
 .pagination>.disabled>a,
@@ -87,23 +88,54 @@ ul.breadcrumb {
 /*=== dabapps bootstrap styles ====*/
 
 html {
-  width:100%;
-  background: none;
+  max-width:100%;
+  height: auto;
+  background: None;
+  
 }
 
-/*body, .navbar .container-fluid {
+/* body, .navbar .container-fluid {
   max-width: 1150px;
   margin: 0 auto;
-}*/
+} */
 
 body {
-  background: url("../img/grid.png") repeat-x;
+  
+  background-image:  url("../img/comic.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  /* height: auto; */
+  
   background-attachment: fixed;
+  
+  background-blend-mode:luminosity;
+ 
+  
 }
+
+td {
+  border: 5px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+tr:nth-child(odd) {
+  background-color: #f8f6f6;
+  border-collapse: collapse;
+  border: 5px solid black;
+}
+
+.table {
+  border:5px solid black;
+  background-color: #f8f6f6;
+}
+
 
 #content {
   margin: 0;
   padding-bottom: 60px;
+  /* background-image:  url("../img/comic.jpg"); */
 }
 
 /* sticky footer and footer */
@@ -118,6 +150,13 @@ html, body {
   padding-top: 60px;
   margin: -60px 0;
   min-height: 100%;
+  
+  }
+/* @media (min-width: 1200px) */
+
+.container {
+  width: 1170px;
+  /* opacity: 50%; */
 }
 
 .form-switcher {
@@ -176,18 +215,18 @@ footer {
 
 footer p {
   text-align: center;
-  color: gray;
+  color: rgb(247, 242, 242);
   border-top: 1px solid #DDDDDD;
   padding-top: 10px;
 }
 
 footer a {
-  color: gray !important;
+  color: rgb(247, 241, 241) !important;
   font-weight: bold;
 }
 
 footer a:hover {
-  color: gray;
+  color: rgb(248, 245, 245);
 }
 
 .page-header {
@@ -198,19 +237,53 @@ footer a:hover {
 
 /* custom general page styles */
 .hero-unit h1, .hero-unit h2 {
-  color: #A30000;
+  color: #0c0c0c;
 }
 
 body a {
-  color: #A30000;
+  color: #000000;
+  font-size: larger;
+  font-weight: 1000;
 }
 
 body a:hover {
-  color: #c20000;
+  color: #f70707;
+  font-size: larger;
+  font-weight: 1000;
 }
 
+body {
+  color: #0a0a0a;
+  font-size: 20px;
+}
+.table{
+  color: #030303;
+  font-weight: 1000;
+
+}
+
+
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: "Glyphicons halflings";
+  font-style:oblique;
+  font-weight: 2;
+  font-size: .5px;
+  line-height: .000025;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+
+
+
+
 .request-info {
-  clear:both;
+  clear:both ;
 }
 
 .horizontal-checkbox label {
