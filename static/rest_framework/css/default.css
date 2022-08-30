@@ -3,7 +3,7 @@ content running up underneath it. */
 
 h1 {
   font-weight: 1000;
-  color: rgb(190, 29, 29);
+  color: #A30000;
   
 }
 
@@ -73,7 +73,7 @@ form select[multiple] {
 }
 
 .btn-primary:hover {
-  color: rgb(255, 0, 0);
+  color: #A30000;
   background-color: #080808;
  
 }

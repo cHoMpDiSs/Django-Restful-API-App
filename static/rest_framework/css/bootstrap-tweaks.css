@@ -1,9 +1,7 @@
 /*
-
 This CSS file contains some tweaks specific to the included Bootstrap theme.
 It's separate from `style.css` so that it can be easily overridden by replacing
 a single block in the template.
-
 */
 
 .form-actions {
@@ -57,7 +55,7 @@ a single block in the template.
 
 .navbar .dropdown-menu li a:hover {
   background: #EEEEEE;
-  color: #C20000;
+  color: #A30000;
 }
 
 ul.breadcrumb {
@@ -248,7 +246,7 @@ body a {
 }
 
 body a:hover {
-  color: #cc3e3e;
+  color: #A30000;
   font-size: larger;
   font-weight: 1000;
 }
@@ -266,14 +264,15 @@ body {
 
 
 .glyphicon {
-  position: relative;
+  position: center;
   top: 1px;
-  display: inline-block;
   font-family: "Glyphicons halflings";
-  font-style:oblique;
-  font-weight: 2;
-  font-size: .5px;
-  line-height: .000025;
+  border-radius: 3px;
+  padding-left: 25px;
+  /* font-style:oblique; */
+  font-weight: 5;
+  font-size: 15px;
+  line-height: .25;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -306,3 +305,9 @@ body {
   margin-left: 5px;
   margin-right: 5px;
 }
+/* Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Secu */
