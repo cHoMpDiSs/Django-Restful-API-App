@@ -1,7 +1,3 @@
-# project
+Django/Python Comic Shop Database Configured for a Docker Container on AWS EC2 Ubuntu Server. 
 
-<<<<<<< HEAD
-This project is an app with a portfolio style home page introducing myself. On the homepage there are links to all of my latest projects and a downloadable resume. The Comic Shop Api feature when clicked takes you to an API to my comic book store database. All made with Dhango and deployed on AWS.
-=======
-This project is an app with a portfolio style home page introducing myself. On the homepage there are links to all of my latest projects and a downloadable resume. The Comic Shop Api feature when clicked takes you to an API to my comic book store database. All made with Dhango and deployed on AWS.
->>>>>>> 79834034d7f6713e50946ce76352da67deb89e09
+
