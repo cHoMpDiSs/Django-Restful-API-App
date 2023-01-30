@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-(xb9-bnbrrv(i(tv%m=rf#3ocqemvn*31!m*45g&8zru$n$f^c
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'ec2-34-198-127-7.compute-1.amazonaws.com', '0.0.0.0', 'localhost', '127.0.0.1'
+    'ec2-34-198-127-7.compute-1.amazonaws.com', '0.0.0.0', 'localhost', '127.0.0.1','jordonmarchesano.com','comic-api.com'
 ]
 
 # Application definition
@@ -122,8 +122,8 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_PERMISSION_CLASSES': [
        
-        # 'rest_framework.permissions.AllowAny',
-        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+        'rest_framework.permissions.AllowAny',
+        # 'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     ]
 }
 

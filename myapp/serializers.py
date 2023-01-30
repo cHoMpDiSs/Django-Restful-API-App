@@ -5,9 +5,7 @@ from .models import *
 class ComicSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comics
-        fields = ['id','publisher', 'superhero', 'series', 'issue', 'price']
-
-
+        fields = ['id','publisher', 'superhero', 'series', 'issue', 'price', 'image']
 
 
 

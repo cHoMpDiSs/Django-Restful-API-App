@@ -8,14 +8,18 @@ from rest_framework import renderers
 from .serializers import *
 from .models import Comics, Publisher, Toys, Superhero
 # Create your views here.
-def home(request):
-    return render(request, 'home.html')
-
 def comics(request):
     return render(request, 'comics.html')
 
-def thankyou(request):
-    return render(request, 'thankyou.html')
+# def index(request):
+#     return render(request, 'index.html')
+
+# def comics(request):
+#     comics = Comics.objects.all()
+#     return render(request, 'comics.html', {'comics':comics})
+
+# def thankyou(request):
+#     return render(request, 'thankyou.html')
 
 #  ==============================================
 # Comics api functions
@@ -47,7 +51,8 @@ class ComicApiView(APIView):
             'superhero' : request.data.get('superhero'),
             'series' : request.data.get('series'),
             'issue' :request.data.get('issue'),
-            'price':request.data.get('price')          
+            'price':request.data.get('price'),
+            'image':request.data.get('image')             
         }
         
         serializer = ComicSerializer(data=data)
@@ -72,7 +77,8 @@ class ComicApiView(APIView):
             'superhero' : request.data.get('superhero'),
             'series' : request.data.get('series'),
             'issue' :request.data.get('issue'),
-            'price':request.data.get('price')          
+            'price':request.data.get('price'),
+            'image':request.data.get('image')            
         }
         serializer = ComicSerializer(instance = comic_instance, data=data, partial = True)
         if serializer.is_valid():

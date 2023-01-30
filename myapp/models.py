@@ -28,9 +28,10 @@ class Comics(models.Model):
     series = models.CharField(max_length=30) 
     issue = models.CharField(max_length=20)
     price = models.CharField(max_length=10)
+    image = models.CharField(max_length=50,default='s3_image_link')
 
     def __str__(self):
-        return f'{self.publisher, self.superhero, self.series, self.issue, self.price}'
+        return f'{self.publisher, self.superhero, self.series, self.issue, self.price, self.image}'
        
 
 
@@ -40,9 +41,10 @@ class Toys(models.Model):
     toy_type = models.CharField(max_length=20)
     toy_name = models.CharField(max_length=20)
     ages = models.CharField(max_length=20)
+    image = models.CharField(max_length=50,default='s3_image_link')
 
     def __str__(self):
-        return f'{self.publisher, self.super_hero, self.toy_type, self.toy_name, self.ages}'
+        return f'{self.publisher, self.super_hero, self.toy_type, self.toy_name, self.ages, self.image}'
 
 
 

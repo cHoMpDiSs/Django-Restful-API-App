@@ -16,9 +16,9 @@ router.register(r'api/toys', ToysViewSet)
 
 urlpatterns = [
   
-    
-    path('', home, name='home'),
-    path('thankyou', thankyou, name='thankyou'),
+ 
+    path('', comics, name='comics'),
+   
     path('api', include(router.urls)),
     path('/api/comics',ComicApiView.as_view()),
     path('/api/comics/<int:comic_id>', ComicApiView.as_view()),
